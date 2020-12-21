@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import s from './FeedbackOptions.module.css';
 
-function FeedbackForm({ options, onLeaveFeedback }) {
+const FeedbackForm = ({ options, onLeaveFeedback }) => {
   return (
     <ul className={s.buttonList}>
       {options.map(option => (
@@ -18,7 +18,7 @@ function FeedbackForm({ options, onLeaveFeedback }) {
       ))}
     </ul>
   );
-}
+};
 
 FeedbackForm.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
